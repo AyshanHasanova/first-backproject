@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-     "dev": "nodemon app.js",
-  "prod": "NODE_ENV=PRODUCTION nodemon app.js"
+  "dev":"NODE_ENV=DEVELOPMENT nodemon app.js",
+  "prod":"NODE_ENV=PRODUCTION nodemon app.js"
   },
   "keywords": [],
   "author": "",

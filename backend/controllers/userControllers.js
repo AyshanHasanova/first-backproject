@@ -2,6 +2,7 @@ import User from "../models/User.js"
 import catchAsyncError from "../middlewares/catchAsyncError.js"
 import ErrorHandler from "../utils/errorHandler.js"
 import sendToken from "../utils/sendToken.js"
+
 export const registerUser = catchAsyncError( async(req,res,next)=>{
     const {name,email,password} = req.body
 

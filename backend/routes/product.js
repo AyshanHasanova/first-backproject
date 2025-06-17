@@ -6,7 +6,7 @@ import { authorizeRoles, isAuthenticatedUser } from "../middlewares/auth.js"
 
 const router=express.Router()
 // Get isteyinin marsurutunu qurulmasi
-router.get("/mehsullar", isAuthenticatedUser, authorizeRoles("admin"), getProducts)
+router.get("/mehsullar",  getProducts)
 router.get("/mehsullar/:id",getProductsDetails)
 router.post("/admin/new", isAuthenticatedUser , authorizeRoles("admin"),createProduct)
 router.delete("/admin/delete/:id",isAuthenticatedUser, authorizeRoles("admin"),deleteProduct)

@@ -8,7 +8,7 @@ export default [
       images: [
         {
           public_id: "shopit/demo/nkkjkta63uiazppzkmjf",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577488/shopit/demo/nkkjkta63uiazppzkmjf.jpg",
+          url: "https://www.sephora.com/productimages/sku/s2872448-main-zoom.jpg?imwidth=465",
         },
         {
           public_id: "shopit/demo/hz1iwdqzrvxtfxincvju",
@@ -204,7 +204,7 @@ export default [
       images: [
         {
           public_id: "shopit/demo/mq0zpyzmzqokphs9m9we",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577619/shopit/demo/mq0zpyzmzqokphs9m9we.jpg",
+          url: "https://www.sephora.com/productimages/sku/s2491405-main-zoom.jpg?imwidth=465",
         },
         {
           public_id: "shopit/demo/pkyy8rifxpesiwpy23kk",

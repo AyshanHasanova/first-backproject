@@ -10,14 +10,14 @@ const Mehsullar = () => {
     if(isError) {
         console.log(error)
        
-        toast.error(error?.data?.message)
+        toast.error(error?.data || "Serverde xeta var")
     }
 }, [isError])
   return (
     <div className='products container py-5 mx-auto gap-4  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 '>
       {
-        data?.products?.map(product=>(
-          <Mehsul/>
+        data?.products?.map(birProduct=>(
+          <Mehsul key={birProduct._id} mehsulunId={birProduct._id} mehsulAdiProps = {birProduct.name} mehsulQiymetiProps={birProduct.price} mehsulShekliProps={birProduct.images[0]} />
         ))
        
         

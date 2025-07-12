@@ -61,4 +61,16 @@ export const logout = catchAsyncError ( async (req,res,next)=>{
     })
 })
 
+// cookie-base authzorided ve identifikasiya
+
+export const getUserProfile = catchAsyncError(async(req,res,next)=> {
+    const user = await User.findById(req.user.id)
+
+    res.status(200).json({
+        success:true,
+        user
+    })
+})
+
+
 

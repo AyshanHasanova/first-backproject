@@ -4,6 +4,7 @@ import { useGetProductsQuery } from '../redux/api/productsApi'
 import toast from 'react-hot-toast'
 
 const Mehsullar = () => {
+  
 
   const {data,isLoading,error,isError} = useGetProductsQuery()
   useEffect(()=> {

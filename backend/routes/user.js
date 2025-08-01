@@ -10,6 +10,7 @@ router.post("/login", loginUser)
 router.get("/logout", logout)
 
 
+
 router.get("/me", isAuthenticatedUser, getUserProfile)
 
 

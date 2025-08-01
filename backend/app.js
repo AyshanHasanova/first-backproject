@@ -9,6 +9,7 @@ const app = express ()
 // Router (marsurutlarin daxil edilmesi)
 import productRoutes from "./routes/product.js"
 import userRoutes from "./routes/user.js"
+import authRoutes from "./routes/authrouter.js"
 
 dotenv.config({path: "config/config.env"})
 
@@ -19,6 +20,7 @@ app.use(cookieParser())
 
 app.use("/api/v1",productRoutes)
 app.use("/api/v1",userRoutes)
+app.use("/api/v1",authRoutes)
 
 
 app.use(errorMiddleware)

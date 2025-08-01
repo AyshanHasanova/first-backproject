@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
 export const userApi = createApi({
   reducerPath: "userApi",
   baseQuery: fetchBaseQuery({ baseUrl: "/api/v1", credentials: "include" }),
@@ -19,19 +18,13 @@ export const userApi = createApi({
         body: data,
       }),
     }),
-
- 
-    // logout: builder.query({
-    //     query:() => "/logout"
-    // }),
-    //  ? Yeni elave olunan hisse
-    logout: builder.mutation({
+     logout: builder.mutation({
       query: () => ({
         url: "/logout",
         method: "GET",
         credentials: "include", // cookie də getsin!
       }),
-      // TODO  bu hissə əsasdır
+
       async onQueryStarted(arg, { dispatch, queryFulfilled }) {
         try {
           await queryFulfilled;
@@ -43,7 +36,7 @@ export const userApi = createApi({
       },
     }),
 
-    getUserProfile: builder.query({
+   getUserProfile: builder.query({
       query: () => "/me",
     }),
   }),

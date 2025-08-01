@@ -12,6 +12,6 @@ router.get("/mehsullar/:id",getProductsDetails)
 
 router.post('/admin/product', isAuthenticatedUser, authorizeRoles('admin'), upload.single('image'), createProduct)
 router.delete("/admin/delete/:id",isAuthenticatedUser, authorizeRoles("admin"),deleteProduct)
-router.put("/admin/edit/:id", updateProduct)
+router.put("/admin/edit/:id",isAuthenticatedUser,authorizeRoles("admin") ,updateProduct)
 
 export default router
